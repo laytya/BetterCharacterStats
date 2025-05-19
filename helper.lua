@@ -2158,5 +2158,5 @@ function BCS:GetArmorPen()
         end
     end
 
-    return BCScache["gear"].armor_pen + BCScache["auras"].armor_pen + BCScache["talents"].armor_pen, BCScache["talents"].armor_pen
+    return (BCScache["gear"].armor_pen or 0) + (BCScache["auras"].armor_pen or 0 ) + (BCScache["talents"].armor_pen or 0), BCScache["talents"].armor_pen or 0
 end
