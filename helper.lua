@@ -2079,6 +2079,7 @@ end
 local masterOfArms
 function BCS:GetArmorPen()
     if BCS.needScanTalents then
+        BCScache["talents"].armor_pen = 0
         masterOfArms = nil
         -- Talents
         for tab = 1, GetNumTalentTabs() do
